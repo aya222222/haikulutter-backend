@@ -13,9 +13,9 @@ dotenv.config();
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors(corsOptions));
-app.use((req, res, next) => {
-  res.setHeader("Cross-origin-Opener-Policy", "same-origin-allow-popups");
-});
+// app.use((req, res, next) => {
+//   res.setHeader("Cross-origin-Opener-Policy", "same-origin-allow-popups");
+// });
 
 app.use("/posts", postRoutes);
 app.use("/user", userRoutes);
